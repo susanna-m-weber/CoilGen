@@ -57,7 +57,7 @@ end
 single_ind_to_plot= find_even_leveled_solution(coil_layouts);
 plot_error_different_solutions(coil_layouts,single_ind_to_plot,coil_name);
 plot_2D_contours_with_sf(coil_layouts,single_ind_to_plot,coil_name);
-plot_groups_and_interconnections(coil_layouts,single_ind_to_plot,coil_name);
+plot_groups_and_interconnections(coil_layouts,single_ind_to_plot,coil_name):
 plot_coil_parameters(coil_layouts,coil_name);
 plot_coil_track_with_resulting_bfield(coil_layouts,single_ind_to_plot,coil_name);
 plot_various_error_metrics(coil_layouts,single_ind_to_plot,coil_name);
