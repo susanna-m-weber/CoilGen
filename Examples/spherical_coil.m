@@ -19,8 +19,8 @@ project_name = append('bisected_sphere', datestr(now));
 %close all;
 
 coil_layouts.out=CoilGen(...
-    'field_shape_function','100',... % definition of the target field
-    'coil_mesh_file','bisected_sphere_10.stl', ...    
+    'field_shape_function','0.1',... % definition of the target field
+    'coil_mesh_file','bisected_sphere_10_1500mm.stl', ...    
     'target_mesh_file','none', ... 
     'secondary_target_mesh_file','none', ...
     'sf_source_file','none', ...
@@ -33,9 +33,9 @@ coil_layouts.out=CoilGen(...
     'make_cylndrical_pcb',false,...
     'force_cut_selection',{'low'},...
     'level_set_method','independent',... %Specify one of the three ways the level sets are calculated: "primary","combined", or "independent"
-    'interconnection_method','regular',...
+    'interconnection_method','regular',...`
     'sf_opt_method','tikkonov',...
-    'levels',18, ... % the number of potential steps that determines the later number of windings (Stream function discretization)
+    'levels',25, ... % the number of potential steps that determines the later number of windings (Stream function discretization)
     'tikonov_reg_factor',6,...
     'pot_offset_factor',0.1, ... % a potential offset value for the minimal and maximal contour potential ; must be between 0 and 1
     'interconnection_cut_width',0.005, ... % the width for the interconnections are interconnected; in meters
@@ -43,8 +43,9 @@ coil_layouts.out=CoilGen(...
     'normal_shift_length',0.001, ... % the length for which overlapping return paths will be shifted along the surface normals; in meter
     'iteration_num_mesh_refinement',1, ... % the number of refinements for the mesh;
     'conductor_cross_section_width',0.05,...
-    'geometry_source_path', '/Users/Susanna/Documents/CoilGen/Geometry_Data',...
-    'output_directory', '/Users/Susanna/Documents/CoilGen/output'); 
+    'conductor_thickness', 0.009,...
+    'geometry_source_path', '/Users/susam/CoilGen/Geometry_Data/',...
+    'output_directory', '/Users/susam/CoilGen/output/'); 
 
 
 %% Plot results
@@ -73,13 +74,13 @@ plot_pcb_layouts(coil_layouts,single_ind_to_plot,coil_name);
 rmpath('plotting');
 
 
-FolderName = '/Users/Susanna/Documents/CoilGen/output';   % Your destination folder
-FigList = findobj(allchild(0), 'flat', 'Type', 'figure');
-for iFig = 1:length(FigList)
-  FigHandle = FigList(iFig);
-  FigName   = append(num2str(get(FigHandle, 'Number')), '_', project_name); % num2str(get(FigHandle, 'Number'));
-  set(0, 'CurrentFigure', FigHandle);
-  saveas(iFig, fullfile(FolderName, [FigName '.jpg']));
-end
-
+% FolderName = '/Users/Susanna/Documents/CoilGen/output';   % Your destination folder
+% FigList = findobj(allchild(0), 'flat', 'Type', 'figure');
+% for iFig = 1:length(FigList)
+%   FigHandle = FigList(iFig);
+%   FigName   = append(num2str(get(FigHandle, 'Number')), '_', project_name); % num2str(get(FigHandle, 'Number'));
+%   set(0, 'CurrentFigure', FigHandle);
+%   saveas(iFig, fullfile(FolderName, [FigName '.jpg']));
+% end
+% 
 
