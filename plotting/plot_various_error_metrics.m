@@ -25,7 +25,7 @@ view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
-clim([-4*10^(-3), 4*10^(-3)])
+%clim([-4*10^(-3), 4*10^(-3)])
 ylabel(h, '[mT/A]');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
@@ -40,7 +40,7 @@ plot_colors=sf_c;
 view(45,45);
 colormap(parula);
 h = colorbar;
-clim([-4*10^(-3), 4*10^(-3)])
+%clim([-4*10^(-3), 4*10^(-3)])
 ylabel(h, '[mT/A]');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
@@ -57,7 +57,7 @@ colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
 ylabel(h, '[mT/A]');
-clim([-4*10^(-3), 4*10^(-3)])
+%clim([-4*10^(-3), 4*10^(-3)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
@@ -101,7 +101,7 @@ view(45,45);
 colorbar;
 colormap(parula);
 h = colorbar;
-clim([0, 200])
+%clim([0, 200])
 
 ylabel(h, 'Error %');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
