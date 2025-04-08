@@ -31,8 +31,8 @@ plot_vals_scatter=coil_layouts(single_ind_to_plot).out.field_layout_per1Amp(3,:)
 %field_by_layout=coil_layout(single_ind_to_plot).out.field_by_layout(3,:);
 %plot_vals_scatter=abs((field_by_layout-target_sf))./max(abs(target_sf)).*100;
 h=scatter3(coil_layouts(single_ind_to_plot).out.target_field.coords(1,:),coil_layouts(single_ind_to_plot).out.target_field.coords(2,:),coil_layouts(single_ind_to_plot).out.target_field.coords(3,:),[],plot_vals_scatter,'filled');
-%caxis([min(plot_vals_scatter), max(plot_vals_scatter)]);
-clim([-2.5*10^(-3), 2.5*10^(-3)])
+clim([min(plot_vals_scatter), max(plot_vals_scatter)]);
+%clim([-2.5*10^(-3), 2.5*10^(-3)])
 my_bar=colorbar;
 title( plot_title+": "+'Layout Bz [mT\\A]', 'interpreter', 'none');
 %axis equal tight;

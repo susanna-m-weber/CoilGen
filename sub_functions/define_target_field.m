@@ -99,7 +99,13 @@ target_points=target_points(:,unique_inds);
 %define the target field shape
 field_func=str2func("@(x,y,z)"+" "+input.field_shape_function);
 target_field=zeros(size(target_points));
-target_field(3,:)=field_func(target_points(1,:),target_points(2,:),target_points(3,:));
+%temp_field = field_func(target_points(1,:),target_points(2,:),target_points(3,:));
+%temp_field = interp(temp_field, 2);
+%temp_field(end + 1) = temp_field(end);
+%temp_field(end + 1) = temp_field(end);
+%temp_field(end + 1) = temp_field(end);
+%temp_field(end + 1) = temp_field(end);
+target_field(3,:)= field_func(target_points(1,:),target_points(2,:),target_points(3,:));
 
 
 

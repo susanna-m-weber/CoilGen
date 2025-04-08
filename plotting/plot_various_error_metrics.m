@@ -19,14 +19,15 @@ nexttile;
 %Plot target field
 hold on;
 axis equal tight;
-title('Target Bz, [mT/A]', 'interpreter', 'none');
+title('Target Bz, [T/A]', 'interpreter', 'none');
 plot_colors=target_c;
 view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
-clim([-4*10^(-3), 4*10^(-3)])
-ylabel(h, '[mT/A]');
+%clim([0, 0.6])
+ylabel(h, '[T/A]');
+%clim([-1*10^(-4), 9*10^(-4)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
@@ -35,13 +36,14 @@ nexttile;
 %Plot field by stream function
 hold on;
 axis equal tight;
-title('Bz by stream function, [mT/A]', 'interpreter', 'none');
+title('Bz by stream function, [T/A]', 'interpreter', 'none');
 plot_colors=sf_c;
 view(45,45);
 colormap(parula);
 h = colorbar;
-clim([-4*10^(-3), 4*10^(-3)])
-ylabel(h, '[mT/A]');
+%clim([-1*10^(-4), 9*10^(-4)])
+%clim([0, 0.6])
+ylabel(h, '[T/A]');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
@@ -50,14 +52,15 @@ nexttile;
 %Plot field by layout
 hold on;
 axis equal tight;
-title('Layout Bz, [mT/A]', 'interpreter', 'none');
-plot_colors=layout_c;
+title('Layout Bz, [T/A]', 'interpreter', 'none');
+plot_colors= layout_c_1A; %layout_c;
 view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
 ylabel(h, '[mT/A]');
-clim([-4*10^(-3), 4*10^(-3)])
+%clim([0, 0.6])
+%clim([-2*10^(-3), 2*10^(-3)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
@@ -65,13 +68,13 @@ nexttile;
 %Plot field by unconnected contours
 hold on;
 axis equal tight;
-title('Unconnected Contour Bz, [mT/A]', 'interpreter', 'none');
-plot_colors=loops_c;
+title('Unconnected Contour Bz, [T/A]', 'interpreter', 'none');
+plot_colors=loops_c_1A;
 view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
-ylabel(h, '[mT/A]');
+ylabel(h, '[T/A]');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
@@ -101,7 +104,7 @@ view(45,45);
 colorbar;
 colormap(parula);
 h = colorbar;
-clim([0, 200])
+%clim([0, 70])
 
 ylabel(h, 'Error %');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');

@@ -49,7 +49,7 @@ plot3(coil_layouts(single_ind_to_plot).out.coil_parts(part_ind).contour_lines(lo
 end
 end
 end
-caxis(plot_limits);
+%caxis(plot_limits);
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 %Plot also the target gradient defined by the field shape
 nexttile;

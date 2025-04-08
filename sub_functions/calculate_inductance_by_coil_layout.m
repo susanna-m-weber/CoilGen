@@ -2,7 +2,7 @@ function coil_parts =calculate_inductance_by_coil_layout(coil_parts,input)
 %Calculate the inducate by means of integration of the vector potential
 %along the coil track
 
-cd 'C:\Users\susam\CoilGen\output'
+cd /Users/Susanna/Documents/CoilGen
 conductor_width=input.conductor_cross_section_width;
 conductor_height=input.conductor_cross_section_height;
 skip_inductance_calculation=input.skip_inductance_calculation;
