@@ -58,7 +58,7 @@ view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
-ylabel(h, '[mT/A]');
+ylabel(h, '[T/A]');
 %clim([0, 0.6])
 %clim([-2*10^(-3), 2*10^(-3)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
