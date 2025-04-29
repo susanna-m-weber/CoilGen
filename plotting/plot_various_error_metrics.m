@@ -19,7 +19,7 @@ nexttile;
 %Plot target field
 hold on;
 axis equal tight;
-title('Target Bz, [mT/A]', 'interpreter', 'none');
+title('Target Bz, [T/A]', 'interpreter', 'none');
 plot_colors=target_c;
 view(45,45);
 colormap(parula);
@@ -27,7 +27,7 @@ scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_dat
 h = colorbar;
 %clim([-4*10^(-3), 4*10^(-3)])
 clim([0, 4*10^(-3)])
-ylabel(h, '[mT/A]');
+ylabel(h, '[T/A]');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
@@ -36,14 +36,14 @@ nexttile;
 %Plot field by stream function
 hold on;
 axis equal tight;
-title('Bz by stream function, [mT/A]', 'interpreter', 'none');
+title('Bz by stream function, [T/A]', 'interpreter', 'none');
 plot_colors=sf_c;
 view(45,45);
 colormap(parula);
 h = colorbar;
 %clim([-4*10^(-3), 4*10^(-3)])
 clim([0, 4*10^(-3)])
-ylabel(h, '[mT/A]');
+ylabel(h, '[T/A]');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
@@ -52,13 +52,13 @@ nexttile;
 %Plot field by layout
 hold on;
 axis equal tight;
-title('Layout Bz, [mT/A]', 'interpreter', 'none');
+title('Layout Bz, [T/A]', 'interpreter', 'none');
 plot_colors=layout_c;
 view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
-ylabel(h, '[mT/A]');
+ylabel(h, '[T/A]');
 clim([0, 4*10^(-3)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
@@ -67,13 +67,13 @@ nexttile;
 %Plot field by unconnected contours
 hold on;
 axis equal tight;
-title('Unconnected Contour Bz, [mT/A]', 'interpreter', 'none');
+title('Unconnected Contour Bz, [T/A]', 'interpreter', 'none');
 plot_colors=loops_c;
 view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
-ylabel(h, '[mT/A]');
+ylabel(h, '[T/A]');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
