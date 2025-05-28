@@ -59,7 +59,7 @@ colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
 ylabel(h, '[T/A]');
-clim([0, 4*10^(-3)])
+%clim([0, 4*10^(-3)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 

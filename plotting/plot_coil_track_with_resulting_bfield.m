@@ -41,7 +41,7 @@ view(45,45);
 set(gcf,'color','w');
 set(gca,'FontWeight','bold');
 %set(gca,'FontSize',15);
-clim([0, 4]);
+%clim([0, 4]);
 hold off;
 
 %Plot layout together with error
