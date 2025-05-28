@@ -26,7 +26,7 @@ colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
 %clim([-4*10^(-3), 4*10^(-3)])
-clim([0, 4*10^(-3)])
+%clim([0, 4*10^(-3)])
 ylabel(h, '[T/A]');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
@@ -42,24 +42,23 @@ view(45,45);
 colormap(parula);
 h = colorbar;
 %clim([-4*10^(-3), 4*10^(-3)])
-clim([0, 4*10^(-3)])
+%clim([0, 4*10^(-3)])
 ylabel(h, '[T/A]');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
-
 nexttile;
 %Plot field by layout
 hold on;
 axis equal tight;
 title('Layout Bz, [T/A]', 'interpreter', 'none');
-plot_colors=layout_c;
+plot_colors=layout_c_1A;
 view(45,45);
 colormap(parula);
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
 h = colorbar;
 ylabel(h, '[T/A]');
-clim([0, 4*10^(-3)])
+%clim([0, 4*10^(-3)])
 xlabel('x[m]'); ylabel('y[m]'); zlabel('z[m]');
 hold off
 
@@ -98,7 +97,7 @@ nexttile;
 hold on
 axis equal tight;
 title('Relative error layout vs. target, [%]', 'interpreter', 'none');
-plot_colors=abs(layout_c-target_c)./max(abs(target_c))*100;
+plot_colors=abs(layout_c_1A-target_c)./max(abs(target_c))*100;
 view(45,45);
 colorbar;
 colormap(parula);
@@ -115,7 +114,7 @@ nexttile;
 hold on
 axis equal tight;
 title('Relative error layout vs. sf field, [%]', 'interpreter', 'none');
-plot_colors=abs(layout_c-sf_c)./max(abs(sf_c))*100;
+plot_colors=abs(layout_c_1A-sf_c)./max(abs(sf_c))*100;
 view(45,45);
 colorbar;
 colormap(parula);
@@ -146,7 +145,7 @@ nexttile;
 hold on
 axis equal tight;
 title('Field difference between unconnected contours and final layout, [%]', 'interpreter', 'none');
-plot_colors=abs(loops_c-layout_c)./max(abs(target_c))*100;
+plot_colors=abs(loops_c-layout_c_1A)./max(abs(target_c))*100;
 view(45,45);
 colorbar;
 colormap(parula);
