@@ -102,7 +102,7 @@ view(45,45);
 colorbar;
 colormap(parula);
 h = colorbar;
-clim([0, 200])
+clim([0, 500])
 
 ylabel(h, 'Error %');
 scatter3(pos_data(1,:),pos_data(2,:),pos_data(3,:),dot_size*ones(1,numel(pos_data,2)),plot_colors,'filled');
