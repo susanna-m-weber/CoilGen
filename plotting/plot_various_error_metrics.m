@@ -19,7 +19,7 @@ nexttile;
 %Plot target field
 hold on;
 axis equal tight;
-title('Target Bz, [T/A]', 'interpreter', 'none');
+title('Target B, [T/A]', 'interpreter', 'none');
 plot_colors=target_c;
 view(45,45);
 colormap(parula);
@@ -36,7 +36,7 @@ nexttile;
 %Plot field by stream function
 hold on;
 axis equal tight;
-title('Bz by stream function, [T/A]', 'interpreter', 'none');
+title('B by stream function, [T/A]', 'interpreter', 'none');
 plot_colors=sf_c;
 view(45,45);
 colormap(parula);
@@ -52,7 +52,7 @@ nexttile;
 %Plot field by layout
 hold on;
 axis equal tight;
-title('Layout Bz, [T/A]', 'interpreter', 'none');
+title('Layout B, [T/A]', 'interpreter', 'none');
 plot_colors= layout_c_1A; %layout_c;
 view(45,45);
 colormap(parula);
@@ -68,7 +68,7 @@ nexttile;
 %Plot field by unconnected contours
 hold on;
 axis equal tight;
-title('Unconnected Contour Bz, [T/A]', 'interpreter', 'none');
+title('Unconnected Contour B, [T/A]', 'interpreter', 'none');
 plot_colors=loops_c_1A;
 view(45,45);
 colormap(parula);
